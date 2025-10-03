@@ -102,3 +102,15 @@ public class Solutions {
 }
 
 ```
+
+#### CLASS SolutionIngredient
+
+```java
+
+public class SolutionIngredient {
+
+    private Ingredient ingredient;
+    private double quantity;
+}
+
+```
