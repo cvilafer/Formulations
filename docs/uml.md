@@ -114,3 +114,76 @@ public class SolutionIngredient {
 }
 
 ```
+
+
+### UML Renting Car
+
+```mermaid
+classDiagram
+    class App {
+
+    } 
+
+    class Car{
+      - String id
+      - String brand
+      - String model
+      - String plate
+      - int year
+      - double price
+    }
+    class Client{
+      - String id
+      - String name
+      - String lastName
+      - String address
+      - String email
+      - bool premium
+      - int age
+    }
+    class Booking{
+      - bool isActive
+      - LocalDate bookingDate
+      - int days
+      - Car car
+      - Client client
+      - double price
+      - bool isActive  
+
+    }
+
+    class FakeDataDBPopulator {
+    }
+
+    class CarManager {
+
+     - printCars()
+
+    }
+
+    class DataStore {
+
+    - String id;
+    - List<Car> cars;
+    - List<Client> clients;
+    - List <Booking> bookings
+    - bool isActive;
+    - int creationDate;
+    - int lastModification;
+
+
+     }
+
+
+    App --> FakeDataDBPopulator
+    DataStore ..o App
+    DataStore --* Car
+    DataStore --* Booking
+    DataStore --* Client
+    Car --* Booking
+    Client --* Booking
+```
+
+
+
+
