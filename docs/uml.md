@@ -116,7 +116,7 @@ public class SolutionIngredient {
 ```
 
 
-### UML Renting Car
+### UML Formulations
 
 ```mermaid
 classDiagram
@@ -183,6 +183,7 @@ classDiagram
     Car --* Booking
     Client --* Booking
 ```
+
 
 
 
