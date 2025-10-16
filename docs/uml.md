@@ -144,12 +144,15 @@ classDiagram
 
     }
 
-    class FakeDataDBPopulator {
+    class Composition {
+- Component component
+    - double quantity
     }
 
-    class CarManager {
+    class Unit {
 
-     - printCars()
+     - int id;
+    - String description;
 
     }
 
@@ -175,6 +178,7 @@ classDiagram
     Car --* Booking
     Client --* Booking
 ```
+
 
 
 
