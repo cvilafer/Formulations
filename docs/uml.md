@@ -135,14 +135,12 @@ classDiagram
     - String description
     - Unit unit
     }
-    class Booking{
-      - bool isActive
-      - LocalDate bookingDate
-      - int days
-      - Car car
-      - Client client
-      - double price
-      - bool isActive  
+    class Formulation{
+        - int id
+    - String description
+    - double lastCost
+    - List<Ingredient> ingredients
+
 
     }
 
@@ -177,6 +175,7 @@ classDiagram
     Car --* Booking
     Client --* Booking
 ```
+
 
 
 
