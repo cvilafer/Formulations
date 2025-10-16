@@ -130,14 +130,10 @@ classDiagram
       - Unit unit
       - double cost    
     }
-    class Client{
-      - String id
-      - String name
-      - String lastName
-      - String address
-      - String email
-      - bool premium
-      - int age
+    class Component{
+        - int id
+    - String description
+    - Unit unit
     }
     class Booking{
       - bool isActive
@@ -181,6 +177,7 @@ classDiagram
     Car --* Booking
     Client --* Booking
 ```
+
 
 
 
