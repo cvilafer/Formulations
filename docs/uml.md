@@ -124,13 +124,11 @@ classDiagram
 
     } 
 
-    class Car{
+    class Ingredient{
       - String id
-      - String brand
-      - String model
-      - String plate
-      - int year
-      - double price
+      - String description
+      - Unit unit
+      - double cost    
     }
     class Client{
       - String id
@@ -183,6 +181,7 @@ classDiagram
     Car --* Booking
     Client --* Booking
 ```
+
 
 
 
