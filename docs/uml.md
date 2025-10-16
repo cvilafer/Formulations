@@ -86,7 +86,7 @@ public class Unit {
 ```
 
 
-#### CLASS Unit
+#### CLASS Solutions
 
 ```java
 
@@ -156,16 +156,12 @@ classDiagram
 
     }
 
-    class DataStore {
+    class Solutions {
 
-    - String id;
-    - List<Car> cars;
-    - List<Client> clients;
-    - List <Booking> bookings
-    - bool isActive;
-    - int creationDate;
-    - int lastModification;
-
+    - int id
+    - double cost
+    - Formulation formulation
+    - List<SolutionIngredient> solutionIngredients
 
      }
 
@@ -178,6 +174,7 @@ classDiagram
     Car --* Booking
     Client --* Booking
 ```
+
 
 
 
