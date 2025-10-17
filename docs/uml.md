@@ -166,6 +166,13 @@ classDiagram
      }
 
 
+public class SolutionIngredient {
+
+    - Ingredient ingredient
+    - double quantity
+}
+
+
     App --> FakeDataDBPopulator
     DataStore ..o App
     DataStore --* Car
@@ -174,6 +181,7 @@ classDiagram
     Car --* Booking
     Client --* Booking
 ```
+
 
 
 
