@@ -151,8 +151,8 @@ classDiagram
 
     class Unit {
 
-     - int id;
-    - String description;
+     - int id
+    - String description
 
     }
 
@@ -174,6 +174,7 @@ classDiagram
     Car --* Booking
     Client --* Booking
 ```
+
 
 
 
