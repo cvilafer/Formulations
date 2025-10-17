@@ -1,20 +1,196 @@
 ## UML Data Model
 
-#### CLASS Car
+#### CLASS Ingredient
 
 ```java
-ackage org.example;
+package org.example;
 
-public class Car {
-    private String id;
-    private String brand;
-    private String model;
-    private String plate;
-    private int year;
-    private double price;
+public class Ingredient {
 
-    // constructor, geters, setters, methods and toString
+    private int id;
+    private String description;
+    private Unit unit;
+    private double cost;
 
-    private int carAge ()
+    private List<Composition> compositions;
+
+    
+
 }
+
+
 ```
+
+#### CLASS Component
+
+```java
+public class Component {
+
+    private int id;
+    private String description;
+    private Unit unit;
+}
+
+```
+
+
+#### CLASS Formulation
+
+```java
+
+public class Formulation {
+
+    private int id;
+    private String description;
+    private double lastCost;
+    private List<Ingredient> ingredients;
+
+}
+
+```
+
+
+#### CLASS Composition
+
+```java
+
+public class Composition {
+
+    private Component component;
+    private double quantity;
+
+
+
+}
+
+
+```
+
+
+#### CLASS Unit
+
+```java
+
+
+public class Unit {
+
+    private int id;
+    private String description;
+
+
+}
+
+```
+
+
+#### CLASS Solution
+
+```java
+
+public class Solution {
+
+    private int id;
+    private double cost;
+    private Formulation formulation;
+    private List<SolutionIngredient> solutionIngredients;
+
+
+
+}
+
+```
+
+#### CLASS SolutionIngredient
+
+```java
+
+public class SolutionIngredient {
+
+    private Ingredient ingredient;
+    private double quantity;
+}
+
+```
+
+
+### UML Formulations
+
+```mermaid
+classDiagram
+    class App {
+
+    } 
+
+    class Ingredient{
+      - String id
+      - String description
+      - Unit unit
+      - double cost    
+    }
+    class Component{
+        - int id
+    - String description
+    - Unit unit
+    }
+    class Formulation{
+        - int id
+    - String description
+    - double lastCost
+    - List<Ingredient> ingredients
+
+
+    }
+
+    class Composition {
+- Component component
+    - double quantity
+    }
+
+    class Unit {
+
+     - int id
+    - String description
+
+    }
+
+    class Solution {
+
+    - int id
+    - double cost
+    - Formulation formulation
+    - List<SolutionIngredient> solutionIngredients
+
+     }
+
+
+ class SolutionIngredient {
+
+    - Ingredient ingredient
+    - double quantity
+}
+
+
+    App --> FakeDataDBPopulator
+    Composition ..* Component
+    Formulation --* Ingredient
+    Ingredient --* Composition
+    Solution --* SolutionIngredient
+    DataStore --* Client
+    Car --* Booking
+    Client --* Booking
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
