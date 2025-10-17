@@ -86,11 +86,11 @@ public class Unit {
 ```
 
 
-#### CLASS Solutions
+#### CLASS Solution
 
 ```java
 
-public class Solutions {
+public class Solution {
 
     private int id;
     private double cost;
@@ -156,7 +156,7 @@ classDiagram
 
     }
 
-    class Solutions {
+    class Solution {
 
     - int id
     - double cost
@@ -174,6 +174,7 @@ classDiagram
     Car --* Booking
     Client --* Booking
 ```
+
 
 
 
