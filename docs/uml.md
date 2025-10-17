@@ -166,7 +166,7 @@ classDiagram
      }
 
 
-public class SolutionIngredient {
+ class SolutionIngredient {
 
     - Ingredient ingredient
     - double quantity
@@ -181,6 +181,7 @@ public class SolutionIngredient {
     Car --* Booking
     Client --* Booking
 ```
+
 
 
 
