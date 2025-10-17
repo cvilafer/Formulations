@@ -14,10 +14,7 @@ public class Ingredient {
 
     private List<Composition> compositions;
 
-    public Ingredient(int id, String description, int idUnit) {
-        this.id = id;
-        this.description = description;
-    }
+    
 
 }
 
@@ -174,13 +171,15 @@ classDiagram
 
 
     App --> FakeDataDBPopulator
-    DataStore ..o App
-    DataStore --* Car
-    DataStore --* Booking
+    Composition ..* Component
+    Formulation --* Ingredient
+    Ingredient --* Composition
+    Solution --* SolutionIngredient
     DataStore --* Client
     Car --* Booking
     Client --* Booking
 ```
+
 
 
 
